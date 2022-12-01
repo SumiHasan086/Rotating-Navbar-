@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    overflow-x:hidden;
+    background:#333;
+    color:#222;
+}
+.container{
+    width:100vw;
+    min-height:100vh;
+    padding:30px;
+    background-color:#fafafa;
+    transform-origin:top left;
+    transition:transform 0.5s linear;
+    
+}
+ .container.show-nav{
+    transform:rotate(-20deg);
+}
+.container.show-nav+nav ul li{
+    transform:translateX(0);
+    transition-delay:0.5s linear;
+}
+.container.show-nav .circle{
+    transform:rotate(-70deg);
+}
+.circle-container{
+    position:fixed;
+    top:-100px;
+    left:-100px;
+}
+.circle{
+    background:#ff5200;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    position:relative;
+    transition:transform 0.5s linear;
+}
+.circle button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    background:transparent;
+    border:0;
+    font-size:25px;
+    color:#fff;
+    cursor:pointer;
+}
+.circle button:focus{
+    outline:none;
+}
+
+#open{
+    top:60%;
+    left:60%;
+   
+}
+#close{
+    top:70%;
+    left:40%;
+    transform:rotate(90deg);
+    transform-origin: top left;
+}
+
+.content{
+    max-width:600px;
+    margin:auto;
+}
+.content h1{
+    color:blue;
+}
+.content small{
+    font-weight:600;
+    font-style:italic;
+    font-size:16px;
+}
+.content p{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:15px;
+}
+.content h2{
+    color:blue;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.content img{
+    max-width:50%;
+}
+nav{
+    position:fixed;
+    bottom:40px;
+    left:50px;
+    z-index:100; 
+}
+nav ul{
+    list-style:none;
+}
+nav ul li{
+    margin:20px 0;
+    color:white;
+    transform:translateX(-200px);
+    transition:0.5s linear;
+}
+nav ul li+li{
+    margin-left:15px;
+    transform:translateX(-250px);
+}
+nav ul li+li+li{
+    margin-left:30px;
+    transform:translateX(-300px);
+}
+nav ul li i{
+    color: white !important;
+    padding-right:10px;
+}
+
+
+
+
